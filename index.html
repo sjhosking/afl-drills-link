@@ -7,15 +7,17 @@
     window.onload = function () {
       const hash = window.location.hash.substring(1);
       if (hash) {
-        // Store the drill data temporarily
-        localStorage.setItem("shared_drill", hash);
+        // Redirect directly to your Firebase web app with the drill
+        window.location.href = "https://afl-drill-board.web.app/#" + hash;
+      } else {
+        // No drill, just go to the homepage
+        window.location.href = "https://afl-drill-board.web.app/";
       }
-      // Redirect to the app or Play Store
-      window.location.href = "https://play.google.com/store/apps/details?id=com.example.afl_drill_board";
     };
   </script>
 </head>
 <body>
-  <p>Redirecting to the app...</p>
+  <p>Redirecting to the web app...</p>
 </body>
 </html>
+
